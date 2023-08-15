@@ -1,0 +1,56 @@
+{% extends "layout.html" %}
+{% block titulo %} Produtos {% endblock %}
+
+{% block container %} 
+
+
+    <div class="">
+        <a name="" id="" class="btn btn-success" href="{% url 'cad_produto' %}" role="button">Cadastro de produto</a>
+    </div>
+ 
+
+    </div>
+            <div>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Id</th>                           
+                            <th>Ean</th>                            
+                            <th>Nome</th>
+                            <th>Descrição</th>
+                            <th>Preço</th> 
+                            <th>Imagem</th> 
+                            <th>Ação</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for produto in produtos %}
+                        <tr>
+                            <td>{{ produto.idProdut }}</td>                           
+                            <td>{{ produto.eanProdut }}</td>                          
+                            <td>{{ produto.nomProdut }}</td> 
+                            <td>{{ produto.desProdut }}</td>    
+                            <td>{{ produto.preProdut }}</td>   
+                            <td>
+                                <img src="{{ produto.imgProdut.url }}" height="80">
+                                
+                                </td>                           
+                            <td> 
+                                <a name="" id="" class="btn btn-info" href="{% url 'editar_produto' produto.idProdut %}" role="button">Editar</a> 
+                                |
+                                <a name="" id="" class="btn btn-danger" href="{% url 'deletar_produto' produto.idProdut %}" role="button">Deletar</a> 
+                            </td>
+                        </tr>  
+                        {% endfor %}               
+                    </tbody>
+                </table>
+
+
+
+            </div>
+    
+   
+     </div>
+
+
+{% endblock %}

@@ -1,0 +1,29 @@
+<form method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    {% for campo in formulario %}
+    <div class="row">
+        <div class="col">
+            <label for="" class="form-label">{{ campo.label }}:</label>
+
+            {% if  campo.field.widget.input_type == 'file' and campo.value %}
+        </br>
+            <img src="{{MEDIA_URL}}/images/{{campo.value}}" width="100" alt="" srcset="">
+            {% endif%}
+            <input type="{{ campo.field.widget.input_type }}"
+                   class="form-control"
+                   name="{{ campo.name }}"
+                   id=""
+                   placeholder="{{campo.value}}"
+                   value="{{ campo.value | default:''}}">
+        </div>  
+    </div>
+
+    <div class="col-12 help-text">{{ campo.errors }}</div>   
+
+    {% endfor %}
+
+    <hr>
+
+    <input class="button-primary mt-3 btn btn-info btn-block bold" type="submit" value="Cadastrar">
+
+</form>
