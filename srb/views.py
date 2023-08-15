@@ -7,6 +7,9 @@ from .forms import ProdutoForm
 def home(request):
     return render(request,'page/inicio.html')
 
+def painel(request):  
+    return render(request,'page/painel.html')
+
 def produtos(request):
     produtos = Produtos.objects.all()
     print(produtos)

@@ -1,4 +1,5 @@
 from django.db import models
+from django.utils.formats import localize
 
 # Create your models here.
 
@@ -6,9 +7,8 @@ class Produtos(models.Model):
     idProdut = models.AutoField(primary_key=True)
     eanProdut = models.CharField(max_length=100, verbose_name="Ean")
     nomProdut = models.CharField(max_length=100, verbose_name="Nome")
-    desProdut = models.CharField(max_length=100, verbose_name="Descricão")
-    preProdut = models.FloatField( verbose_name="Preco")
-  
+    desProdut = models.CharField(max_length=100, verbose_name="Descricão")    
+    preProdut = models.FloatField()   
     imgProdut = models.ImageField(upload_to='images/',verbose_name="Imagem",null=True)
     
     def __str__(self):

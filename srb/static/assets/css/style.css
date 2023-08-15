@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Outifit',sans-serif;
+
+}
+
+body{
+    height: 900vh;
+   
+}
+
+nav.menu-lateral{
+    width: 70px;
+    height: 100%;
+    background-color: #202020;
+    padding: 40px 0 40px 1%;
+    box-shadow: 3px 0 0 #006400;
+    position:fixed;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    transition: .7s;
+}
+
+nav.menu-lateral:hover{
+width: 300px;
+
+}
+
+.btn-expandir{
+    width: 100%;
+    padding-left:10px;
+}
+
+.btn-expandir > i{
+    color: #fff;
+    font-size: 24px;
+    cursor:pointer;
+}
+
+ul{
+    height:100%;
+    list-style-type: none;
+}
+
+ul li.item-menu{
+    transition: .4s;
+}
+
+ul li.ativo{
+    background-color: #006400;
+}
+
+ul li.item-menu:hover{
+    background: #006400;
+}
+
+ul li.item-menu a{
+    color: #000;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 20px 4%;
+    display: flex;
+    margin-bottom: 20px;
+    line-height: 20px; 
+}
+
+ul li.item-menu a .txt-link{
+    margin-left: 40px;
+}
+
+ul li.item-menu a .icon > i{
+    font-size: 20px;
+}
+
+/* Formulario de Produto */
+p{
+    color: #006400;
+    margin-left: 200px;
+}
+
+section{
+    padding: 15px 10px;
+    border-radius: 5px;
+    margin: 0 auto;
+    width: 80% !important;
+    background-color: #f2f4f8 !important;
+    margin-bottom: 50px;
+}

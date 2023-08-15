@@ -1,6 +1,6 @@
 {% load static %}
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="pt-br">
 
 <head>
   <title>{% block titulo %} {% endblock %}</title>
@@ -19,11 +19,10 @@
     <nav class="navbar navbar-expand navbar-light bg-light">
         <div class="nav navbar-nav">
             <a class="nav-item nav-link active" href="{% url 'home' %}">Home <span class="visually-hidden">(current)</span></a>
-            <a class="nav-item nav-link" href="{% url 'produtos' %}">Produtos</a>
-            <a class="nav-item nav-link" href="#">Contatos</a>
+            <a class="nav-item nav-link" href="">Produtos</a>
+            <a class="nav-item nav-link" href="{%url 'painel' %}">Admin</a>
         </div>
     </nav>
-
 
    <div class="container">
         <div class="row">
